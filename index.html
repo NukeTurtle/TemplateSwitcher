@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Template</title>
+</head>
+<body>
+    <header>
+        <div id="selections">
+            <span>Select screen:</span><br>
+            <select name="element" id="element">
+                <option value="m1">Main 1</option>
+                <option value="s1">Secondary 1</option>
+                <option value="s2">Secondary 2</option>
+            </select>
+            <button onclick="paragraph()">Paragraph</button>
+            <button onclick="image()">Image</button>
+            <button onclick="list()">List</button>
+            <button onclick="fill()">Fill</button>
+            <button onclick="dropdown()">Dropdown</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        <div id="screens">
+            <span>Select screen template:</span>
+            <div class="button one_main_50_right_two_secondary_50_left" onclick="one_main_50_right_two_secondary_50_left()"></div>
+            <div class="button one_main_70_left_one_30_secondary_right" onclick="one_main_70_left_one_30_secondary_right()"></div>
+            <div class="button one_main_70_top_one_30_secondary_bottom" onclick="one_main_70_top_one_30_secondary_bottom()"></div>
+            <div class="button one_main_50_top_two_secondary_50_bottom" onclick="one_main_50_top_two_secondary_50_bottom()"></div>
+        </div>
+    </header>
+    <main>
+        <div id="placeholder">
+            <div id="screen" class="main full_height fifty_width right">0</div>
+            <div id="screen" class="secondary fifty_height fifty_width top left">1</div>
+            <div id="screen" class="secondary fifty_height fifty_width bottom left">1</div>
+        </div>
+    </main>
+    <script src="functions.js"></script>
+</body>
+</html>

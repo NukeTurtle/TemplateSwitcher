@@ -1,0 +1,118 @@
+:root{
+    --screen_background: #e7eaee;
+    --screen_border: 1px solid #c5c7c9;
+}
+body{
+    margin: 0;
+}
+header{
+    padding: 0 1vw;
+}
+header, #screens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#placeholder{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    margin: 1vw;
+    margin-top: 0;
+    gap: 1vw;
+    height: calc(100vh - 1vw - 50px);
+}
+.button{
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.one_main_50_right_two_secondary_50_left{
+    background-image: url(img/one_main_right_two_secondary_left.png);
+}
+.one_main_70_left_one_30_secondary_right{
+    background-image: url(img/one_main_left_one_secondary_right.png);
+}
+.one_main_70_top_one_30_secondary_bottom{
+    background-image: url(img/one_main_top_one_secondary_bottom.png);
+}
+.one_main_50_top_two_secondary_50_bottom{
+    background-image: url(img/one_main_top_two_secondary_bottom.png);
+}
+.main, .secondary{
+    border: var(--screen_border);
+    background-color: var(--screen_background);
+    padding: 1em;
+}
+#m1{
+    grid-area: 1 / 7 / 13 / 13;
+    border: var(--screen_border);
+}
+#s1{
+    grid-area: 1 / 1 / 7 / 7;
+}
+#s2{
+    grid-area: 7 / 1 / 13 / 7;
+}
+#one_70_main_left{
+    grid-area: 1 / 1 / 13 / 9;
+}
+#one_30_secondary_right{
+    grid-area: 1 / 9 / 13 / 13;
+}
+.screen_image{
+    background-image: url("img/image.jpg");
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.screen_fill{
+    width: 100%;
+    height: 100%;
+    background-color: #3f29c3;
+}
+
+
+.top{
+    grid-row-start: 1 !important;
+}
+.right{
+    grid-column-end: 13 !important;
+}
+.left{
+    grid-column-start: 1 !important;
+}
+.bottom{
+    grid-row-end: 13 !important;
+}
+.thirty_width{
+    grid-column: span 3 / span 3;
+}
+.fifty_width{
+    grid-column: span 6 / span 6;
+}
+.seventy_width{
+    grid-column: span 9 / span 9;
+}
+.full_width{
+    grid-column: span 12 / span 12;
+}
+.thirty_height{
+    grid-row: span 3 / span 3;
+}
+.fifty_height{
+    grid-row: span 6 / span 6;
+}
+.seventy_height{
+    grid-row: span 9 / span 9;
+}
+.full_height{
+    grid-row: span 12 / span 12 !important;
+}
+.top.left, .top.right, .bottom.left, .bottom.right{
+    grid-row: span 6 / span 6;
+}
